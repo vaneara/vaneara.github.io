@@ -5,39 +5,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio Personal</title>
 
-  <!-- Vinculo al CSS -->
   <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Encabezado -->
+  <!-- HEADER -->
   <header>
-    <h1>Mi Portafolio</h1>
+    <h1>Portafolio de Vane Ara</h1>
   </header>
 
-  <!-- Navegación -->
-  <nav>
-    <a href="#">Sobre mí</a>
-    <a href="#">Proyectos</a>
-    <a href="#">Contacto</a>
-  </nav>
-
-  <!-- Contenido principal -->
+  <!-- NAV -->
+ <nav>
+  <ul>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#tarjetas">Proyectos</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+ 
+  <!-- MAIN -->
   <main>
-    <section>
-      <h2>Bienvenida</h2>
-      <p>Hola, soy Vanesa y esta es mi página web.</p>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+
+      <img src="img/mi-avatar.jpg" alt="Avatar de Vanesa" width="200">
+
+     <p>
+  Soy Vanesa, me estoy formando en desarrollo de software con un enfoque en la creación de soluciones útiles, prácticas y bien diseñadas. Me interesa especialmente el desarrollo desde el lado visual y funcional, buscando que las aplicaciones no solo cumplan su propósito, sino que también sean claras y agradables para el usuario.
+  Tengo una fuerte inclinación por lo artístico, lo que me permite aportar una mirada más creativa al desarrollo, prestando atención a los detalles, la estética y la experiencia de uso.
+  Mi objetivo es seguir creciendo en el área IT, combinando lógica, funcionalidad y diseño para crear productos que realmente aporten valor.
+</p>
+      
     </section>
+
+    <!-- SECCIÓN TARJETAS -->
+    <section id="tarjetas">
+      <h2>Proyectos</h2>
+
+      <div class="contenedor-tarjetas">
+
+        <div class="tarjeta">
+          <h3>Proyecto 1</h3>
+          <img src="img/sistema-clinica.jpeg" alt="Sistema Clínica Se Prise" width="500">
+          <p>Sistema de gestión de Clínica desarrollada en C#.</p>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Proyecto 2</h3>
+          <img src="img/sistema-club.jpeg" alt="Sistema Club Deportivo" width="250">
+          <p>Aplicación para gestión de clientes de un club deportivo.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES: listado organizado -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+
+    <h3>Técnicas</h3>
+     <ul>
+      <li>Desarrollo de aplicaciones en C# (Windows Forms)</li>
+      <li>Gestión de bases de datos y consultas SQL</li>
+      <li>Maquetación web con HTML y CSS</li>
+      <li>Programación en Kotlin (entorno JVM)</li>
+     </ul>
+
+    <h3>Artísticas</h3>
+     <ul>
+      <li>Formación en artes visuales (dibujo, escultura y cerámica)</li>
+      <li>Aplicación de teoría del color y composición visual</li>
+     </ul>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+
+      <form action="#" method="POST">
+
+  <div class="campo">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required>
+  </div>
+
+  <div class="campo">
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" required>
+  </div>
+
+  <div class="campo">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="campo">
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono">
+  </div>
+
+  <button type="submit">Enviar mensaje</button>
+
+     </form>
+
+    </section>
+
+    <!-- SECCIÓN PELÍCULAS-->
+    <section id="peliculas">
+      <h2>Películas Favoritas</h2>
+
+      <div class="contenedor-peliculas">
+
+      <div class="pelicula">
+        <h3>La ladrona de libros</h3>
+        <img src="img/la-ladrona-de-libros.jpeg" alt="Película La ladrona de libros" width="150">
+        <p>En plena Alemania nazi, una niña encuentra refugio en los libros mientras el mundo a su alrededor se derrumba. 
+          Un relato emotivo sobre la esperanza, la humanidad y el poder de las palabras.</p>
+      </div>
+
+      <div class="pelicula">
+        <h3>Seven</h3>
+        <img src="img/seven.jpeg" alt="Película Seven" width="150">
+        <p>Dos detectives siguen el rastro de un asesino que castiga a sus víctimas según los pecados capitales. 
+          Un thriller oscuro y atrapante que explora lo peor de la mente humana.</p>
+      </div>
+
+      <div class="pelicula">
+        <h3>12 Años de esclavitud</h3>
+        <img src="img/12-años-de-esclavitud.jpeg" alt="Película 12 Años de esclavitud" width="150">
+        <p>Un hombre libre es secuestrado y vendido como esclavo, enfrentando años de injusticia y dolor. 
+          Una historia real, cruda y profundamente conmovedora sobre la lucha por la dignidad y la libertad.</p>
+      </div>
+
+    </div>
+
+    </section>
+
   </main>
 
-  <!-- Pie de página -->
-  <footer>
-    <p>© 2026 Vanesa</p>
-  </footer>
+  <!-- FOOTER -->
+ <footer>
+  <p>© 2026 Vanesa Aracena</p>
+  <nav aria-label="Redes sociales">
+    <ul>
+      <li>
+        <a href="https://instagram.com/keralia.ceramica" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/vaneara" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/vanesa-aracena-3718a6291" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
 
 </body>
 </html>

@@ -1,3 +1,495 @@
+/* =============================================
+   VARIABLES Y RESET
+   ============================================= */
+
+
+
+:root {
+  --turquesa:     #097485;
+  --turquesa-dark:#034a56;
+  --violeta:      #b547dd;
+  --violeta-dark: #710a9a;
+  --blanco:       #FFFFFF;
+  --gris-claro:   #F4F6F8;
+  --gris-medio:   #b1b2b5;
+  --gris-texto:   #6B7280;
+  --negro-suave:  #1F2937;
+  --sombra:       0 4px 20px rgba(0, 0, 0, 0.08);
+  --sombra-hover: 0 8px 32px rgba(58, 175, 169, 0.2);
+  --radio:        16px;
+  --radio-sm:     10px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: lightblue;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--negro-suave);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+
+/* =============================================
+   HEADER
+   ============================================= */
+
+header {
+  background: linear-gradient(135deg, var(--turquesa) 0%, var(--violeta) 100%);
+  color: var(--blanco);
+  text-align: center;
+  padding: 60px 20px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -40px;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+
+/* =============================================
+   NAVEGACIÓN
+   ============================================= */
+
+body > nav {
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body > nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  padding: 14px 20px;
+  flex-wrap: wrap;
+}
+
+body > nav ul li a {
+  text-decoration: none;
+  color: var(--gris-texto);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: background 0.25s, color 0.25s, transform 0.2s;
+  display: inline-block;
+}
+
+body > nav ul li a:hover {
+  background: linear-gradient(135deg, var(--turquesa), var(--violeta));
+  color: var(--blanco);
+  transform: translateY(-2px);
+}
+
+
+/* =============================================
+   MAIN Y SECCIONES GENERALES
+   ============================================= */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+section {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  padding: 40px 36px;
+  box-shadow: var(--sombra);
+}
+
+section h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--negro-suave);
+  margin-bottom: 24px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--turquesa), var(--violeta));
+  border-radius: 4px;
+}
+
+
+/* =============================================
+   SOBRE MÍ
+   ============================================= */
+
+#sobre-mi {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#sobre-mi img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--turquesa);
+  box-shadow: 0 6px 24px rgba(58, 175, 169, 0.25);
+  flex-shrink: 0;
+}
+
+#sobre-mi div {
+  flex: 1;
+  min-width: 240px;
+}
+
+#sobre-mi p {
+  color: var(--gris-texto);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* =============================================
+   TARJETAS / PROYECTOS
+   ============================================= */
+
+#tarjetas h2 {
+  width: 100%;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  flex: 1 1 260px;
+  background: var(--gris-claro);
+  border-radius: var(--radio-sm);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: 1.5px solid var(--gris-medio);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-hover);
+  border-color: var(--turquesa);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+.tarjeta h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--negro-suave);
+  padding: 16px 18px 6px;
+}
+
+.tarjeta p {
+  font-size: 0.92rem;
+  color: var(--gris-texto);
+  padding: 0 18px 18px;
+  line-height: 1.6;
+}
+
+
+/* =============================================
+   HABILIDADES
+   ============================================= */
+
+#habilidades table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+#habilidades thead tr {
+  background: linear-gradient(135deg, var(--turquesa) 0%, var(--violeta) 100%);
+  color: var(--blanco);
+}
+
+#habilidades thead th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+#habilidades thead th:first-child { border-radius: 10px 0 0 0; }
+#habilidades thead th:last-child  { border-radius: 0 10px 0 0; }
+
+#habilidades tbody tr {
+  border-bottom: 1px solid var(--gris-medio);
+  transition: background 0.2s;
+}
+
+#habilidades tbody tr:hover {
+  background: var(--gris-claro);
+}
+
+#habilidades tbody tr:last-child {
+  border-bottom: none;
+}
+
+#habilidades tbody td {
+  padding: 13px 18px;
+  color: var(--gris-texto);
+}
+
+
+/* =============================================
+   FORMULARIO DE CONTACTO
+   ============================================= */
+
+#contacto form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#contacto .campo {
+  display: flex;
+  flex-direction: column;   
+  gap: 6px;
+}
+
+#contacto label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--negro-suave);
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+#contacto input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--gris-medio);
+  border-radius: var(--radio-sm);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  color: var(--negro-suave);
+  background: var(--gris-claro);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+#contacto input:focus {
+  border-color: var(--turquesa);
+  box-shadow: 0 0 0 3px rgba(58, 175, 169, 0.15);
+  background: var(--blanco);
+}
+
+#contacto button[type="submit"] {
+  grid-column: 2 / 3;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--turquesa), var(--violeta));
+  color: var(--blanco);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-top: 4px;
+}
+
+#contacto button[type="submit"]:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+
+/* =============================================
+   PELÍCULAS FAVORITAS
+   ============================================= */
+
+.contenedor-peliculas {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;              
+}
+
+
+.pelicula {
+  display: grid;
+  grid-template-columns: 150px 1fr; 
+  grid-template-rows: auto;
+  gap: 24px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #E0E4EA;
+}
+
+.pelicula img {
+  grid-column: 1;
+  grid-row: 1 / 3; 
+  border-radius: 12px;
+}
+
+.pelicula h3 {
+  grid-column: 2;     
+  grid-row: 1;       
+  align-self: start;
+}
+
+.pelicula p {
+  grid-column: 2;     
+  grid-row: 2;         
+  padding: 0;
+  margin-top: -8px;
+}
+
+
+.pelicula:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(90, 50, 160, 0.22);
+  border-color: var(--violeta);
+}
+
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+  background: var(--negro-suave);
+  color: var(--gris-medio);
+  padding: 36px 20px;
+  font-size: 0.9rem;
+  display: flex;              
+  flex-direction: column;    
+  align-items: center;        
+  gap: 16px;
+}
+
+footer p {
+  margin-bottom: 14px;
+  color: #9CA3AF;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: white;     
+  border-radius: 50px;
+  overflow: hidden;   
+  gap: 16px;
+  list-style: none;
+  padding: 10px 20px;
+  flex-wrap: wrap;  
+}
+
+footer nav ul li a {
+  color: var(--negro-suave);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 16px;
+  flex-wrap: nowrap;  
+  border-radius: 50px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+footer nav ul li a:hover {
+  color: var(--turquesa);
+  border-color: var(--turquesa);
+  background: transparent;
+  transform: none;
+}
+
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 640px) {
+  section {
+    padding: 28px 20px;
+  }
+
+  #sobre-mi {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #sobre-mi img {
+    margin: 0 auto;
+  }
+
+  #contacto form {
+    grid-template-columns: 1fr;
+  }
+
+  #habilidades table {
+    font-size: 0.82rem;
+  }
+
+  #habilidades thead th,
+  #habilidades tbody td {
+    padding: 10px 10px;
+  }
 }
