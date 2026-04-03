@@ -1,6 +1,4 @@
-/* =============================================
-   VARIABLES Y RESET
-   ============================================= */
+/* VARIABLES Y RESET */
 
 
 
@@ -27,7 +25,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -39,9 +37,7 @@ body {
 }
 
 
-/* =============================================
-   HEADER
-   ============================================= */
+/*  HEADER */
 
 header {
   background: linear-gradient(135deg, var(--turquesa) 0%, var(--violeta) 100%);
@@ -84,9 +80,7 @@ header h1 {
 }
 
 
-/* =============================================
-   NAVEGACIÓN
-   ============================================= */
+/* NAVEGACIÓN */
 
 body > nav {
   background-color: var(--blanco);
@@ -123,9 +117,7 @@ body > nav ul li a:hover {
 }
 
 
-/* =============================================
-   MAIN Y SECCIONES GENERALES
-   ============================================= */
+/* MAIN Y SECCIONES GENERALES */
 
 main {
   max-width: 1100px;
@@ -165,9 +157,7 @@ section h2::after {
 }
 
 
-/* =============================================
-   SOBRE MÍ
-   ============================================= */
+/* SOBRE MÍ */
 
 #sobre-mi {
   display: flex;
@@ -198,9 +188,7 @@ section h2::after {
 }
 
 
-/* =============================================
-   TARJETAS / PROYECTOS
-   ============================================= */
+/* TARJETAS / PROYECTOS */
 
 #tarjetas h2 {
   width: 100%;
@@ -249,15 +237,7 @@ section h2::after {
 }
 
 
-/* =============================================
-   HABILIDADES
-   ============================================= */
-
-#habilidades table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
+/* HABILIDADES*/
 
 #habilidades thead tr {
   background: linear-gradient(135deg, var(--turquesa) 0%, var(--violeta) 100%);
@@ -294,9 +274,7 @@ section h2::after {
 }
 
 
-/* =============================================
-   FORMULARIO DE CONTACTO
-   ============================================= */
+/* FORMULARIO DE CONTACTO */
 
 #contacto form {
   display: grid;
@@ -311,7 +289,6 @@ section h2::after {
 }
 
 #contacto label {
-  display: block;
   font-weight: 700;
   font-size: 0.88rem;
   color: var(--negro-suave);
@@ -324,7 +301,6 @@ section h2::after {
   padding: 12px 16px;
   border: 1.5px solid var(--gris-medio);
   border-radius: var(--radio-sm);
-  font-family: 'Nunito', sans-serif;
   font-size: 0.95rem;
   color: var(--negro-suave);
   background: var(--gris-claro);
@@ -345,7 +321,6 @@ section h2::after {
   color: var(--blanco);
   border: none;
   border-radius: 50px;
-  font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   font-weight: 800;
   cursor: pointer;
@@ -360,9 +335,7 @@ section h2::after {
 }
 
 
-/* =============================================
-   PELÍCULAS FAVORITAS
-   ============================================= */
+/* PELÍCULAS FAVORITAS */
 
 .contenedor-peliculas {
   display: flex;
@@ -410,9 +383,7 @@ section h2::after {
 
 
 
-/* =============================================
-   FOOTER
-   ============================================= */
+/* FOOTER */
 
 footer {
   background: var(--negro-suave);
@@ -426,7 +397,6 @@ footer {
 }
 
 footer p {
-  margin-bottom: 14px;
   color: #9CA3AF;
 }
 
@@ -447,7 +417,6 @@ footer nav ul li a {
   text-decoration: none;
   font-weight: 700;
   padding: 6px 16px;
-  flex-wrap: nowrap;  
   border-radius: 50px;
   border: 1.5px solid rgba(255,255,255,0.15);
   font-size: 0.85rem;
@@ -458,13 +427,10 @@ footer nav ul li a:hover {
   color: var(--turquesa);
   border-color: var(--turquesa);
   background: transparent;
-  transform: none;
 }
 
 
-/* =============================================
-   RESPONSIVE
-   ============================================= */
+/* RESPONSIVE */
 
 @media (max-width: 640px) {
   section {
@@ -481,7 +447,7 @@ footer nav ul li a:hover {
   }
 
   #contacto form {
-    grid-template-columns: 1fr;
+    align-items: stretch;
   }
 
   #habilidades table {
