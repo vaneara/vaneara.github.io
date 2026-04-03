@@ -6,8 +6,6 @@ Este proyecto corresponde a un Trabajo Práctico de Front End. El objetivo es di
 
 La página incluye distintas secciones como presentación personal, tarjetas de proyectos, listado de habilidades, formulario de contacto y películas favoritas, cumpliendo con todos los requerimientos solicitados.
 
-Además, se buscó lograr un equilibrio entre funcionalidad y diseño visual, priorizando la claridad, la estética y la experiencia del usuario.
-
 ---
 
 ## Checklist - Práctica Formativa Obligatoria 1
@@ -35,7 +33,7 @@ Además, se buscó lograr un equilibrio entre funcionalidad y diseño visual, pr
 [x] Tipografía aplicada en el sitio.  
 
 **Elección de fuentes**  
-Se eligieron las fuentes "Playfair Display" y "Lato" porque combinan elegancia y legibilidad. La primera se utiliza en títulos para aportar una estética más visual, mientras que la segunda mejora la lectura en los textos.
+Se eligieron las fuentes "Nunito" y "sans-serif" porque combinan modernidad y legibilidad. La primera se utiliza en títulos para aportar una estética más visual, mientras que la segunda mejora la lectura en los textos.
 
 ---
 

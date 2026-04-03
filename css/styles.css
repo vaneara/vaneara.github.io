@@ -447,8 +447,13 @@ footer nav ul li a:hover {
   }
 
   #contacto form {
+    grid-template-columns: 1fr; 
     align-items: stretch;
   }
+
+  #contacto button[type="submit"] {
+  grid-column: 1 / -1;
+}
 
   #habilidades table {
     font-size: 0.82rem;
